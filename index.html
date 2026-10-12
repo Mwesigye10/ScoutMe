@@ -193,7 +193,8 @@ ul{margin:0;padding:0;list-style:none}
 /* ═══════════════════════════════════════════════════════════
    4. DEMO BAR
    ═══════════════════════════════════════════════════════════ */
-.demo-bar{position:sticky;top:0;z-index:60;height:var(--demo-h);background:#1a2232;border-bottom:1px solid rgba(255,205,85,.25);display:flex;align-items:center;gap:10px;padding:0 14px;font-size:.78rem;color:var(--amber);overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+#demo-root{position:sticky;top:0;z-index:60}
+.demo-bar{position:relative;z-index:60;height:var(--demo-h);background:#1a2232;border-bottom:1px solid rgba(255,205,85,.25);display:flex;align-items:center;gap:10px;padding:0 14px;font-size:.78rem;color:var(--amber);overflow-x:auto;white-space:nowrap;scrollbar-width:none}
 .demo-bar::-webkit-scrollbar{display:none}
 .demo-bar b{letter-spacing:.1em;font-weight:800}
 .demo-bar button{border:1px solid rgba(255,205,85,.3);background:transparent;color:var(--amber);border-radius:999px;padding:3px 11px;font-size:.78rem;font-weight:650;min-height:26px}
@@ -549,6 +550,7 @@ sv: {
 "inbox.title":"Förfrågningar","inbox.sub":"Klubbar som vill komma i kontakt med dig. Ingen får dina uppgifter förrän du säger ja.","inbox.waiting":"Väntar på svar","inbox.history":"Tidigare","inbox.emptyT":"Inga förfrågningar än","inbox.emptyD":"När en klubb hör av sig dyker det upp här. En komplett profil ger fler förfrågningar.","inbox.accept":"Acceptera","inbox.decline":"Tacka nej","inbox.declineBlock":"Tacka nej och blockera","inbox.expires":"Löper ut {date}","inbox.hiddenNote":"Din profil är dold, så nya klubbar hittar dig inte just nu.","inbox.confirmAcceptT":"Dela dina kontaktuppgifter med {club}?","inbox.confirmAcceptD":"{club} får se din e-post ({email}) och ditt telefonnummer ({phone}). Det går inte att ta tillbaka dem efteråt.","inbox.confirmAgent":"Eftersom du har agent ({agent}) visas även agentens kontakt.","inbox.confirmBlockT":"Blockera klubben?","inbox.confirmBlockD":"{club} kan inte längre se din profil eller skicka förfrågningar.","inbox.acceptedToast":"Accepterad. Kontaktuppgifterna är delade","inbox.declinedToast":"Du har tackat nej",
 "set.title":"Inställningar","set.sub":"Konto, språk och dina data.","set.account":"Konto","set.role":"Kontotyp","set.data":"Dina data","set.dataD":"Ladda ner allt vi har sparat om dig som en JSON-fil.","set.export":"Exportera mina data","set.exported":"Dina data är nedladdade","set.delete":"Radera konto","set.deleteD":"Raderar ditt konto och alla uppgifter. Det går inte att ångra.","set.deleteBtn":"Radera mitt konto","set.deleteConfirm":"Är du säker? Kontot och alla uppgifter raderas permanent.","set.deleted":"Kontot är raderat",
 "avail.title":"Tillgänglighet","avail.sub":"Visa klubbarna om du är ledig. Statusen nollställs automatiskt efter 30 dagar, så att ingen ser inaktuell information.","avail.status":"Min status","avail.opt.unknown":"Visa ingen status","avail.opt.free":"Ledig nu","avail.opt.soon":"Ledig från ett datum","avail.opt.contracted":"Har kontrakt","avail.from":"Ledig från","avail.badgeFree":"Ledig nu","avail.badgeSoon":"Ledig från {date}","avail.save":"Spara status","avail.saved":"Status sparad","avail.expired":"Din status har gått ut. Spara den igen så att klubbarna ser att den stämmer.","avail.until":"Din status gäller till {date}. Spara igen för att förnya.","avail.contracted":"Har kontrakt","avail.unknown2":"Ej angiven","err.AVAIL_DATE":"Välj ett datum från och med idag.","f.avail":"Tillgänglighet","f.region":"Region (län)","f.cleanSheets":"Hållna nollor (bara målvakter)","stat.cleanSheets":"Hållna nollor","f.origin":"Bosatt / spelar","disc.regionAll":"Alla regioner","disc.origin.any":"Sverige och utomlands","disc.origin.se":"Spelar i Sverige","disc.origin.abroad":"Spelar utomlands","disc.availOnly":"Bara lediga spelare (nu eller snart)","badge.abroad":"Utomlands","reply.line":"Svarar oftast inom {days} dagar · {pct} % av förfrågningarna besvarade","reply.new":"Ny på ScoutMe – ingen svarshistorik än","pl.saveNamed":"Spara {name}","req.quota":"{left} av {limit} förfrågningar kvar den här månaden.","req.modalTitleTo":"Förfrågan till {name}","disc.sub":"Spelare i Sverige på nivå 2–5. Spelare som bor eller spelar utomlands är märkta.",
+"demo.agent":"Agent","role.agent":"Agent","nav.agentPlayers":"Mina spelare","agt.title":"Mina spelare","agt.sub":"Lägg till spelare och skicka en godkännandelänk till var och en. Profilen visas för klubbarna först när spelaren själv har godkänt den.","agt.stat.total":"Spelare","agt.stat.approved":"Godkända","agt.stat.waiting":"Väntar på godkännande","agt.addTitle":"Lägg till spelare","agt.addSub":"Klistra in en rad per spelare, med semikolon mellan fälten. Du kan kopiera direkt från Excel eller Google Sheets.","agt.rows":"Spelare (en per rad)","agt.cols":"Kolumner: namn; födelsedatum (ÅÅÅÅ-MM-DD); position; nationalitet (landskod, t.ex. PY); land; klubb; nivå (2–5, bara för Sverige); YouTube-länk; spelarens e-post","agt.example":"Fyll i exempel","agt.import":"Importera spelare","agt.confirm":"Jag bekräftar att jag har ett skriftligt avtal med spelarna och att de har gett mig tillåtelse att skicka dem den här länken.","agt.errConfirm":"Du måste bekräfta avtalet för att kunna importera.","agt.errEmpty":"Klistra in minst en rad.","agt.errTitle":"Ingenting importerades. Rätta dessa rader och försök igen:","agt.errLine":"Rad {n}: kontrollera {fields}","agt.col.name":"namn","agt.col.birth":"födelsedatum (ÅÅÅÅ-MM-DD, minst 18 år)","agt.col.pos":"position (GK, CB, CM …)","agt.col.nat":"nationalitet (landskod)","agt.col.country":"land","agt.col.level":"nivå (2–5)","agt.col.video":"YouTube-länk","agt.col.email":"e-post","agt.col.dup":"dubblett","agt.added":"{n} spelare tillagda. Skicka godkännandelänkarna nedan.","agt.listTitle":"Dina spelare","agt.empty":"Inga spelare ännu","agt.approved":"Godkänd","agt.waiting":"Väntar på godkännande","agt.link":"Godkännandelänk","agt.copy":"Kopiera länk","agt.copied":"Länk kopierad","agt.copyFail":"Kunde inte kopiera. Markera länken och kopiera manuellt.","agt.openDemo":"Öppna som spelare (demo)","agt.remove":"Ta bort","agt.removeT":"Ta bort spelaren?","agt.removeD":"Profilen och godkännandelänken raderas.","agt.removed":"Spelaren är borttagen","cons.title":"Godkänn din profil","cons.hi":"Hej {name}","cons.intro":"{agent} vill lägga upp din fotbollsprofil på ScoutMe, så att klubbar i Sverige och Norge kan hitta dig. Ingenting visas för klubbarna förrän du har godkänt.","cons.check":"Kontrollera uppgifterna","cons.what":"Klubbarna ser namn, ålder, position, klubb, statistik och din YouTube-länk (om du har en). Dina kontaktuppgifter delas aldrig utan att du svarar ja på en förfrågan. Eftersom du har agent går kontakten via {agent}.","cons.c1":"Uppgifterna ovan stämmer","cons.c2":"Jag godkänner att min profil visas för verifierade klubbar på ScoutMe","cons.c3":"Jag är minst 18 år","cons.approve":"Godkänn och publicera","cons.decline":"Nej tack, ta bort mig","cons.errChecks":"Kryssa i alla tre rutorna för att godkänna.","cons.doneT":"Tack! Din profil är nu synlig.","cons.doneD":"Klubbar kan hitta dig och skicka förfrågningar. Du kan när som helst be om att få profilen borttagen: {mail}.","cons.goneT":"Din profil har tagits bort.","cons.goneD":"Inget har publicerats och dina uppgifter är raderade.","cons.already":"Den här profilen är redan godkänd.","cons.notFound":"Länken är inte giltig eller har redan använts.","cons.declineT":"Ta bort din profil?","cons.declineD":"Dina uppgifter raderas och inget visas för klubbar.",
 "co.dummy":""
 },
 en: {
@@ -606,6 +608,7 @@ en: {
 "inbox.title":"Requests","inbox.sub":"Clubs that want to get in touch. Nobody gets your details until you say yes.","inbox.waiting":"Waiting for your reply","inbox.history":"Earlier","inbox.emptyT":"No requests yet","inbox.emptyD":"When a club gets in touch it shows up here. A complete profile brings more requests.","inbox.accept":"Accept","inbox.decline":"Decline","inbox.declineBlock":"Decline and block","inbox.expires":"Expires {date}","inbox.hiddenNote":"Your profile is hidden, so new clubs cannot find you right now.","inbox.confirmAcceptT":"Share your contact details with {club}?","inbox.confirmAcceptD":"{club} will see your email ({email}) and phone number ({phone}). This cannot be undone.","inbox.confirmAgent":"Because you have an agent ({agent}), the agent's contact is shown too.","inbox.confirmBlockT":"Block the club?","inbox.confirmBlockD":"{club} will no longer be able to see your profile or send requests.","inbox.acceptedToast":"Accepted. Contact details shared","inbox.declinedToast":"You declined",
 "set.title":"Settings","set.sub":"Account, language and your data.","set.account":"Account","set.role":"Account type","set.data":"Your data","set.dataD":"Download everything we have stored about you as a JSON file.","set.export":"Export my data","set.exported":"Your data has been downloaded","set.delete":"Delete account","set.deleteD":"Deletes your account and all data. This cannot be undone.","set.deleteBtn":"Delete my account","set.deleteConfirm":"Are you sure? The account and all data will be permanently deleted.","set.deleted":"The account is deleted",
 "avail.title":"Availability","avail.sub":"Let clubs see if you are available. The status resets automatically after 30 days, so nobody sees outdated information.","avail.status":"My status","avail.opt.unknown":"Show no status","avail.opt.free":"Available now","avail.opt.soon":"Available from a date","avail.opt.contracted":"Under contract","avail.from":"Available from","avail.badgeFree":"Available now","avail.badgeSoon":"Available from {date}","avail.save":"Save status","avail.saved":"Status saved","avail.expired":"Your status has expired. Save it again so clubs know it is still correct.","avail.until":"Your status is valid until {date}. Save again to renew it.","avail.contracted":"Under contract","avail.unknown2":"Not specified","err.AVAIL_DATE":"Choose a date from today onwards.","f.avail":"Availability","f.region":"Region (county)","f.cleanSheets":"Clean sheets (goalkeepers only)","stat.cleanSheets":"Clean sheets","f.origin":"Lives / plays","disc.regionAll":"All regions","disc.origin.any":"Sweden and abroad","disc.origin.se":"Plays in Sweden","disc.origin.abroad":"Plays abroad","disc.availOnly":"Only available players (now or soon)","badge.abroad":"Abroad","reply.line":"Usually replies within {days} days · {pct}% of requests answered","reply.new":"New on ScoutMe – no reply history yet","pl.saveNamed":"Save {name}","req.quota":"{left} of {limit} requests left this month.","req.modalTitleTo":"Request to {name}","disc.sub":"Players in Sweden, levels 2–5. Players who live or play abroad are marked.",
+"demo.agent":"Agent","role.agent":"Agent","nav.agentPlayers":"My players","agt.title":"My players","agt.sub":"Add players and send each one an approval link. A profile is shown to clubs only after the player has approved it himself.","agt.stat.total":"Players","agt.stat.approved":"Approved","agt.stat.waiting":"Awaiting approval","agt.addTitle":"Add players","agt.addSub":"Paste one line per player, with semicolons between the fields. You can copy straight from Excel or Google Sheets.","agt.rows":"Players (one per line)","agt.cols":"Columns: name; date of birth (YYYY-MM-DD); position; nationality (country code, e.g. PY); country; club; level (2–5, Sweden only); YouTube link; player's email","agt.example":"Fill in example","agt.import":"Import players","agt.confirm":"I confirm that I have a written agreement with these players and that they have given me permission to send them this link.","agt.errConfirm":"You must confirm the agreement before importing.","agt.errEmpty":"Paste at least one line.","agt.errTitle":"Nothing was imported. Fix these lines and try again:","agt.errLine":"Line {n}: check {fields}","agt.col.name":"name","agt.col.birth":"date of birth (YYYY-MM-DD, at least 18)","agt.col.pos":"position (GK, CB, CM …)","agt.col.nat":"nationality (country code)","agt.col.country":"country","agt.col.level":"level (2–5)","agt.col.video":"YouTube link","agt.col.email":"email","agt.col.dup":"duplicate","agt.added":"{n} players added. Send the approval links below.","agt.listTitle":"Your players","agt.empty":"No players yet","agt.approved":"Approved","agt.waiting":"Awaiting approval","agt.link":"Approval link","agt.copy":"Copy link","agt.copied":"Link copied","agt.copyFail":"Could not copy. Select the link and copy it manually.","agt.openDemo":"Open as player (demo)","agt.remove":"Remove","agt.removeT":"Remove the player?","agt.removeD":"The profile and the approval link will be deleted.","agt.removed":"Player removed","cons.title":"Approve your profile","cons.hi":"Hi {name}","cons.intro":"{agent} wants to publish your football profile on ScoutMe, so that clubs in Sweden and Norway can find you. Nothing is shown to clubs until you approve.","cons.check":"Check your details","cons.what":"Clubs see your name, age, position, club, stats and your YouTube link (if you have one). Your contact details are never shared unless you say yes to a request. Because you have an agent, contact goes through {agent}.","cons.c1":"The details above are correct","cons.c2":"I agree that my profile is shown to verified clubs on ScoutMe","cons.c3":"I am at least 18 years old","cons.approve":"Approve and publish","cons.decline":"No thanks, remove me","cons.errChecks":"Tick all three boxes to approve.","cons.doneT":"Thank you! Your profile is now visible.","cons.doneD":"Clubs can find you and send requests. You can ask for your profile to be removed at any time: {mail}.","cons.goneT":"Your profile has been removed.","cons.goneD":"Nothing was published and your details have been deleted.","cons.already":"This profile has already been approved.","cons.notFound":"The link is not valid or has already been used.","cons.declineT":"Remove your profile?","cons.declineD":"Your details are deleted and nothing is shown to clubs.",
 "co.dummy":""
 },
 no: {
@@ -663,6 +666,7 @@ no: {
 "inbox.title":"Forespørsler","inbox.sub":"Klubber som vil komme i kontakt med deg. Ingen får opplysningene dine før du sier ja.","inbox.waiting":"Venter på svar","inbox.history":"Tidligere","inbox.emptyT":"Ingen forespørsler ennå","inbox.emptyD":"Når en klubb tar kontakt, dukker det opp her. En komplett profil gir flere forespørsler.","inbox.accept":"Godta","inbox.decline":"Takk nei","inbox.declineBlock":"Takk nei og blokker","inbox.expires":"Utløper {date}","inbox.hiddenNote":"Profilen din er skjult, så nye klubber finner deg ikke akkurat nå.","inbox.confirmAcceptT":"Dele kontaktopplysningene dine med {club}?","inbox.confirmAcceptD":"{club} får se e-posten din ({email}) og telefonnummeret ditt ({phone}). Dette kan ikke angres.","inbox.confirmAgent":"Fordi du har agent ({agent}), vises agentens kontakt også.","inbox.confirmBlockT":"Blokkere klubben?","inbox.confirmBlockD":"{club} kan ikke lenger se profilen din eller sende forespørsler.","inbox.acceptedToast":"Godtatt. Kontaktopplysningene er delt","inbox.declinedToast":"Du har takket nei",
 "set.title":"Innstillinger","set.sub":"Konto, språk og dataene dine.","set.account":"Konto","set.role":"Kontotype","set.data":"Dataene dine","set.dataD":"Last ned alt vi har lagret om deg som en JSON-fil.","set.export":"Eksporter dataene mine","set.exported":"Dataene dine er lastet ned","set.delete":"Slett konto","set.deleteD":"Sletter kontoen din og alle opplysninger. Dette kan ikke angres.","set.deleteBtn":"Slett kontoen min","set.deleteConfirm":"Er du sikker? Kontoen og alle opplysninger slettes permanent.","set.deleted":"Kontoen er slettet",
 "avail.title":"Tilgjengelighet","avail.sub":"La klubbene se om du er ledig. Statusen nullstilles automatisk etter 30 dager, slik at ingen ser utdatert informasjon.","avail.status":"Min status","avail.opt.unknown":"Vis ingen status","avail.opt.free":"Ledig nå","avail.opt.soon":"Ledig fra en dato","avail.opt.contracted":"Har kontrakt","avail.from":"Ledig fra","avail.badgeFree":"Ledig nå","avail.badgeSoon":"Ledig fra {date}","avail.save":"Lagre status","avail.saved":"Status lagret","avail.expired":"Statusen din er utløpt. Lagre den på nytt, så klubbene ser at den stemmer.","avail.until":"Statusen din gjelder til {date}. Lagre på nytt for å fornye.","avail.contracted":"Har kontrakt","avail.unknown2":"Ikke oppgitt","err.AVAIL_DATE":"Velg en dato fra og med i dag.","f.avail":"Tilgjengelighet","f.region":"Region (län)","f.cleanSheets":"Holdt nullen (bare keepere)","stat.cleanSheets":"Holdt nullen","f.origin":"Bor / spiller","disc.regionAll":"Alle regioner","disc.origin.any":"Sverige og utlandet","disc.origin.se":"Spiller i Sverige","disc.origin.abroad":"Spiller i utlandet","disc.availOnly":"Bare ledige spillere (nå eller snart)","badge.abroad":"Utlandet","reply.line":"Svarer vanligvis innen {days} dager · {pct} % av forespørslene besvart","reply.new":"Ny på ScoutMe – ingen svarhistorikk ennå","pl.saveNamed":"Lagre {name}","req.quota":"{left} av {limit} forespørsler igjen denne måneden.","req.modalTitleTo":"Forespørsel til {name}","disc.sub":"Spillere i Sverige på nivå 2–5. Spillere som bor eller spiller i utlandet er merket.",
+"demo.agent":"Agent","role.agent":"Agent","nav.agentPlayers":"Mine spillere","agt.title":"Mine spillere","agt.sub":"Legg til spillere og send hver av dem en godkjenningslenke. Profilen vises for klubbene først når spilleren selv har godkjent den.","agt.stat.total":"Spillere","agt.stat.approved":"Godkjent","agt.stat.waiting":"Venter på godkjenning","agt.addTitle":"Legg til spillere","agt.addSub":"Lim inn én linje per spiller, med semikolon mellom feltene. Du kan kopiere rett fra Excel eller Google Sheets.","agt.rows":"Spillere (én per linje)","agt.cols":"Kolonner: navn; fødselsdato (ÅÅÅÅ-MM-DD); posisjon; nasjonalitet (landskode, f.eks. PY); land; klubb; nivå (2–5, bare Sverige); YouTube-lenke; spillerens e-post","agt.example":"Fyll inn eksempel","agt.import":"Importer spillere","agt.confirm":"Jeg bekrefter at jeg har en skriftlig avtale med spillerne og at de har gitt meg tillatelse til å sende dem denne lenken.","agt.errConfirm":"Du må bekrefte avtalen før du kan importere.","agt.errEmpty":"Lim inn minst én linje.","agt.errTitle":"Ingenting ble importert. Rett disse linjene og prøv igjen:","agt.errLine":"Linje {n}: kontroller {fields}","agt.col.name":"navn","agt.col.birth":"fødselsdato (ÅÅÅÅ-MM-DD, minst 18 år)","agt.col.pos":"posisjon (GK, CB, CM …)","agt.col.nat":"nasjonalitet (landskode)","agt.col.country":"land","agt.col.level":"nivå (2–5)","agt.col.video":"YouTube-lenke","agt.col.email":"e-post","agt.col.dup":"duplikat","agt.added":"{n} spillere lagt til. Send godkjenningslenkene under.","agt.listTitle":"Dine spillere","agt.empty":"Ingen spillere ennå","agt.approved":"Godkjent","agt.waiting":"Venter på godkjenning","agt.link":"Godkjenningslenke","agt.copy":"Kopier lenke","agt.copied":"Lenke kopiert","agt.copyFail":"Kunne ikke kopiere. Marker lenken og kopier manuelt.","agt.openDemo":"Åpne som spiller (demo)","agt.remove":"Fjern","agt.removeT":"Fjerne spilleren?","agt.removeD":"Profilen og godkjenningslenken slettes.","agt.removed":"Spilleren er fjernet","cons.title":"Godkjenn profilen din","cons.hi":"Hei {name}","cons.intro":"{agent} vil legge ut fotballprofilen din på ScoutMe, slik at klubber i Sverige og Norge kan finne deg. Ingenting vises for klubbene før du har godkjent.","cons.check":"Kontroller opplysningene","cons.what":"Klubbene ser navn, alder, posisjon, klubb, statistikk og YouTube-lenken din (hvis du har en). Kontaktopplysningene dine deles aldri uten at du svarer ja på en forespørsel. Siden du har agent, går kontakten via {agent}.","cons.c1":"Opplysningene over stemmer","cons.c2":"Jeg godkjenner at profilen min vises for verifiserte klubber på ScoutMe","cons.c3":"Jeg er minst 18 år","cons.approve":"Godkjenn og publiser","cons.decline":"Nei takk, fjern meg","cons.errChecks":"Kryss av alle tre rutene for å godkjenne.","cons.doneT":"Takk! Profilen din er nå synlig.","cons.doneD":"Klubber kan finne deg og sende forespørsler. Du kan når som helst be om å få profilen fjernet: {mail}.","cons.goneT":"Profilen din er fjernet.","cons.goneD":"Ingenting er publisert og opplysningene dine er slettet.","cons.already":"Denne profilen er allerede godkjent.","cons.notFound":"Lenken er ikke gyldig eller er allerede brukt.","cons.declineT":"Fjerne profilen din?","cons.declineD":"Opplysningene dine slettes og ingenting vises for klubber.",
 "co.dummy":""
 },
 es: {
@@ -720,6 +724,7 @@ es: {
 "inbox.title":"Solicitudes","inbox.sub":"Clubes que quieren ponerse en contacto contigo. Nadie recibe tus datos hasta que digas que sí.","inbox.waiting":"Esperando tu respuesta","inbox.history":"Anteriores","inbox.emptyT":"Aún no hay solicitudes","inbox.emptyD":"Cuando un club te escriba aparecerá aquí. Un perfil completo atrae más solicitudes.","inbox.accept":"Aceptar","inbox.decline":"Rechazar","inbox.declineBlock":"Rechazar y bloquear","inbox.expires":"Caduca el {date}","inbox.hiddenNote":"Tu perfil está oculto, así que los clubes nuevos no te encuentran ahora mismo.","inbox.confirmAcceptT":"¿Compartir tus datos de contacto con {club}?","inbox.confirmAcceptD":"{club} verá tu correo ({email}) y tu teléfono ({phone}). No se puede deshacer.","inbox.confirmAgent":"Como tienes representante ({agent}), también se muestra su contacto.","inbox.confirmBlockT":"¿Bloquear al club?","inbox.confirmBlockD":"{club} ya no podrá ver tu perfil ni enviar solicitudes.","inbox.acceptedToast":"Aceptada. Datos de contacto compartidos","inbox.declinedToast":"Has rechazado",
 "set.title":"Ajustes","set.sub":"Cuenta, idioma y tus datos.","set.account":"Cuenta","set.role":"Tipo de cuenta","set.data":"Tus datos","set.dataD":"Descarga todo lo que hemos guardado sobre ti como archivo JSON.","set.export":"Exportar mis datos","set.exported":"Tus datos se han descargado","set.delete":"Eliminar cuenta","set.deleteD":"Elimina tu cuenta y todos los datos. No se puede deshacer.","set.deleteBtn":"Eliminar mi cuenta","set.deleteConfirm":"¿Seguro? La cuenta y todos los datos se eliminarán de forma permanente.","set.deleted":"La cuenta se ha eliminado",
 "avail.title":"Disponibilidad","avail.sub":"Muestra a los clubes si estás disponible. El estado se restablece automáticamente a los 30 días, para que nadie vea información desactualizada.","avail.status":"Mi estado","avail.opt.unknown":"No mostrar estado","avail.opt.free":"Disponible ya","avail.opt.soon":"Disponible desde una fecha","avail.opt.contracted":"Con contrato","avail.from":"Disponible desde","avail.badgeFree":"Disponible ya","avail.badgeSoon":"Disponible desde {date}","avail.save":"Guardar estado","avail.saved":"Estado guardado","avail.expired":"Tu estado ha caducado. Guárdalo de nuevo para que los clubes sepan que sigue siendo correcto.","avail.until":"Tu estado es válido hasta el {date}. Guárdalo de nuevo para renovarlo.","avail.contracted":"Con contrato","avail.unknown2":"No indicado","err.AVAIL_DATE":"Elige una fecha a partir de hoy.","f.avail":"Disponibilidad","f.region":"Región (provincia)","f.cleanSheets":"Porterías a cero (solo porteros)","stat.cleanSheets":"Porterías a cero","f.origin":"Reside / juega","disc.regionAll":"Todas las regiones","disc.origin.any":"Suecia y extranjero","disc.origin.se":"Juega en Suecia","disc.origin.abroad":"Juega en el extranjero","disc.availOnly":"Solo jugadores disponibles (ya o pronto)","badge.abroad":"Extranjero","reply.line":"Suele responder en {days} días · {pct} % de solicitudes respondidas","reply.new":"Nuevo en ScoutMe – aún sin historial de respuestas","pl.saveNamed":"Guardar a {name}","req.quota":"Quedan {left} de {limit} solicitudes este mes.","req.modalTitleTo":"Solicitud a {name}","disc.sub":"Jugadores en Suecia, niveles 2–5. Los que viven o juegan en el extranjero están marcados.",
+"demo.agent":"Agente","role.agent":"Agente","nav.agentPlayers":"Mis jugadores","agt.title":"Mis jugadores","agt.sub":"Añade jugadores y envía a cada uno un enlace de aprobación. El perfil solo se muestra a los clubes cuando el propio jugador lo ha aprobado.","agt.stat.total":"Jugadores","agt.stat.approved":"Aprobados","agt.stat.waiting":"Pendientes de aprobación","agt.addTitle":"Añadir jugadores","agt.addSub":"Pega una línea por jugador, con punto y coma entre los campos. Puedes copiar directamente desde Excel o Google Sheets.","agt.rows":"Jugadores (uno por línea)","agt.cols":"Columnas: nombre; fecha de nacimiento (AAAA-MM-DD); posición; nacionalidad (código de país, p. ej. PY); país; club; nivel (2–5, solo Suecia); enlace de YouTube; correo del jugador","agt.example":"Rellenar ejemplo","agt.import":"Importar jugadores","agt.confirm":"Confirmo que tengo un acuerdo por escrito con estos jugadores y que me han autorizado a enviarles este enlace.","agt.errConfirm":"Debes confirmar el acuerdo antes de importar.","agt.errEmpty":"Pega al menos una línea.","agt.errTitle":"No se importó nada. Corrige estas líneas e inténtalo de nuevo:","agt.errLine":"Línea {n}: revisa {fields}","agt.col.name":"nombre","agt.col.birth":"fecha de nacimiento (AAAA-MM-DD, mínimo 18 años)","agt.col.pos":"posición (GK, CB, CM …)","agt.col.nat":"nacionalidad (código de país)","agt.col.country":"país","agt.col.level":"nivel (2–5)","agt.col.video":"enlace de YouTube","agt.col.email":"correo","agt.col.dup":"duplicado","agt.added":"{n} jugadores añadidos. Envía los enlaces de aprobación de abajo.","agt.listTitle":"Tus jugadores","agt.empty":"Aún no hay jugadores","agt.approved":"Aprobado","agt.waiting":"Pendiente de aprobación","agt.link":"Enlace de aprobación","agt.copy":"Copiar enlace","agt.copied":"Enlace copiado","agt.copyFail":"No se pudo copiar. Selecciona el enlace y cópialo manualmente.","agt.openDemo":"Abrir como jugador (demo)","agt.remove":"Eliminar","agt.removeT":"¿Eliminar al jugador?","agt.removeD":"Se borrarán el perfil y el enlace de aprobación.","agt.removed":"Jugador eliminado","cons.title":"Aprueba tu perfil","cons.hi":"Hola {name}","cons.intro":"{agent} quiere publicar tu perfil de fútbol en ScoutMe para que los clubes de Suecia y Noruega puedan encontrarte. No se muestra nada a los clubes hasta que lo apruebes.","cons.check":"Revisa tus datos","cons.what":"Los clubes ven tu nombre, edad, posición, club, estadísticas y tu enlace de YouTube (si tienes). Tus datos de contacto nunca se comparten sin que digas que sí a una solicitud. Como tienes agente, el contacto se hace a través de {agent}.","cons.c1":"Los datos anteriores son correctos","cons.c2":"Acepto que mi perfil se muestre a clubes verificados en ScoutMe","cons.c3":"Tengo al menos 18 años","cons.approve":"Aprobar y publicar","cons.decline":"No, gracias, elimíname","cons.errChecks":"Marca las tres casillas para aprobar.","cons.doneT":"¡Gracias! Tu perfil ya es visible.","cons.doneD":"Los clubes pueden encontrarte y enviarte solicitudes. Puedes pedir que se elimine tu perfil en cualquier momento: {mail}.","cons.goneT":"Tu perfil ha sido eliminado.","cons.goneD":"No se ha publicado nada y tus datos se han borrado.","cons.already":"Este perfil ya está aprobado.","cons.notFound":"El enlace no es válido o ya se ha usado.","cons.declineT":"¿Eliminar tu perfil?","cons.declineD":"Se borran tus datos y no se muestra nada a los clubes.",
 "co.dummy":""
 }
 };
@@ -739,7 +744,7 @@ es: {
      monthly limit   → enforced in an RPC/trigger (never only in the client)
    ═══════════════════════════════════════════════════════════════════════ */
 const Api = (() => {
-  const KEY = 'scoutme.db.v4';
+  const KEY = 'scoutme.db.v5';
   let db = null;
   const fail = code => { throw Object.assign(new Error(code), { code }); };
   const save = () => store.set(KEY, db);
@@ -748,7 +753,7 @@ const Api = (() => {
 
   /* ---------- seed (fictional people & clubs – no real persons or clubs) ---------- */
   function seed() {
-    const d = { v: 2, seq: 100, users: [], players: [], contacts: {}, clubs: [], requests: [], shortlist: {}, blocks: [], reports: [], session: null };
+    const d = { v: 2, seq: 100, users: [], agents: [], players: [], contacts: {}, clubs: [], requests: [], shortlist: {}, blocks: [], reports: [], session: null };
     const born = age => { const b = new Date(); b.setFullYear(b.getFullYear() - age); b.setDate(b.getDate() - 40); return b.toISOString().slice(0, 10); };
     // id, name, age, pos, foot, height, nat, eu, country, club, level, matches, goals, assists, agentStatus, bio, [agentName, agentEmail]
     const P = [
@@ -823,6 +828,14 @@ const Api = (() => {
     R('r5', 'c3', 'p1', 'pending', 1, null, 'Hej! Vi spelar i Ettan och letar en målskytt. Kan vi boka ett kort samtal?');
     R('r6', 'c4', 'p1', 'pending', 4, null, 'Hei Mateo! Vi er et lag i 2. divisjon i Norge og følger spillere i Sverige. Har du lyst til å høre mer?');
     d.shortlist.c1 = ['p1', 'p4', 'p9'];
+    // agent (demo): a football agency that adds players; each player approves his own profile
+    d.agents.push({ id: 'a1', userId: 'u_a1', name: 'Guaraní Sports Management', contactName: 'Rafael Benítez', email: 'info@guarani-sports.example.com' });
+    d.users.push({ id: 'u_a1', role: 'agent', email: 'info@guarani-sports.example.com', name: 'Rafael Benítez' });
+    d.players.forEach(p => { p.consent = 'approved'; p.agentId = p.agentName === 'Guaraní Sports Management' ? 'a1' : null; });
+    [['p21', 'Rodrigo Cabrera', '2001-03-02', 'CM', 'PY', 'Paraguay', 'Club Ejemplo San Lorenzo', 'demo-token-1'], ['p22', 'Ignacio Torres', '2003-08-19', 'LW', 'UY', 'Uruguay', 'Club Ejemplo Salto', 'demo-token-2']].forEach(([id, name, birth, pos, nat, oc, club, tok]) => {
+      d.players.push({ id, userId: null, name, birthDate: birth, pos, foot: 'R', height: null, nat, eu: EU_EEA.has(nat), country: 'OTHER', otherCountry: oc, club, level: null, region: '', matches: 0, goals: 0, assists: 0, cleanSheets: null, bio: '', agentStatus: 'has', agentName: 'Guaraní Sports Management', agentEmail: 'info@guarani-sports.example.com', agentId: 'a1', consent: 'invited', consentToken: tok, videoUrl: '', photo: null, active: false, demo: true, availability: 'unknown', availableFrom: '', availUpdatedAt: null, replyStats: null, updatedAt: isoIn(-1) });
+      d.contacts[id] = { email: 'info@guarani-sports.example.com', phone: '' };
+    });
     return d;
   }
   function load() {
@@ -838,6 +851,7 @@ const Api = (() => {
   const clubById = id => db.clubs.find(c => c.id === id);
   const sessionUser = () => (db.session ? userById(db.session) : null);
   const myPlayer = () => { const u = sessionUser(); return u && u.role === 'player' ? db.players.find(p => p.userId === u.id) : null; };
+  const myAgent = () => { const u = sessionUser(); return u && u.role === 'agent' ? db.agents.find(a => a.userId === u.id) : null; };
   const myClub = () => { const u = sessionUser(); return u && u.role === 'club' ? db.clubs.find(c => c.userId === u.id) : null; };
   const planActive = c => !!c && c.plan.status === 'active' && new Date(c.plan.renewsAt) > new Date();
   function sweep() {
@@ -889,12 +903,13 @@ const Api = (() => {
         const incoming = db.requests.filter(r => r.playerId === p.id && r.status === 'pending').length;
         return { role: 'player', user: clone(u), profile: { ...clone(p), contact: clone(db.contacts[p.id] || {}), age: ageFrom(p.birthDate), completeness: completeness(p), missing: completenessMissing(p) }, badge: incoming };
       }
+      if (u.role === 'agent') return { role: 'agent', user: clone(u), agent: clone(myAgent()), badge: 0 };
       const c = myClub();
       const monthStart = new Date(); monthStart.setDate(1); monthStart.setHours(0, 0, 0, 0);
       const used = db.requests.filter(r => r.clubId === c.id && new Date(r.createdAt) >= monthStart).length;
       return { role: 'club', user: clone(u), club: clone(c), active: planActive(c), canContact: planActive(c) && c.verified, usage: { used, limit: CONFIG.requestsPerMonth }, badge: 0 };
     },
-    demoPerspectives: { club: 'u_c1', club_unpaid: 'u_c2', player: 'u_p1' },
+    demoPerspectives: { club: 'u_c1', club_unpaid: 'u_c2', player: 'u_p1', agent: 'u_a1' },
     async demoSwitch(kind) { db.session = this.demoPerspectives[kind] || null; save(); },
     async resetDemo() { db = seed(); save(); },
     async signOut() { db.session = null; save(); },
@@ -970,6 +985,57 @@ const Api = (() => {
       return { player: viewPlayer(p, full), request: clone(reqs[0] || null), saved: (db.shortlist[c.id] || []).includes(id), full };
     },
     /* SUPABASE: RLS – select on player_contacts allowed only if accepted request + active plan */
+    /* ----- agent: bulk-add players; every profile is hidden (active:false) until the PLAYER approves it ----- */
+    async agentList() {
+      await sleep(30); const a = myAgent(); if (!a) fail('FORBIDDEN');
+      return db.players.filter(p => p.agentId === a.id).map(p => ({ id: p.id, name: p.name, age: ageFrom(p.birthDate), pos: p.pos, nat: p.nat, club: p.club, consent: p.consent, token: p.consentToken })).sort((x, y) => (x.consent === 'invited' ? 0 : 1) - (y.consent === 'invited' ? 0 : 1));
+    },
+    /* SUPABASE: Edge Function 'agent-import' (service role) – validates, inserts as inactive, creates token rows, sends e-mail via Resend */
+    async agentAddPlayers(text) {
+      await sleep(150); const a = myAgent(); if (!a) fail('FORBIDDEN');
+      const lines = String(text || '').split(/\r?\n/).map(x => x.trim()).filter(Boolean);
+      if (!lines.length) fail('EMPTY'); if (lines.length > 200) fail('TOO_MANY');
+      const rows = [], errors = [], seen = new Set(db.players.filter(p => p.agentId === a.id).map(p => (p.name + p.birthDate).toLowerCase()));
+      lines.forEach((ln, i) => {
+        const [name, birth, pos, nat, country, club, level, yt, email] = ln.split(/;|\t/).map(x => (x || '').trim());
+        const bad = []; const isSE = /^(se|sverige|sweden)$/i.test(country || '');
+        if (!name || name.length < 3) bad.push('name');
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(birth || '') || (ageFrom(birth) || 0) < CONFIG.minAge || (ageFrom(birth) || 0) > 70) bad.push('birth');
+        if (!POSITIONS.includes((pos || '').toUpperCase())) bad.push('pos');
+        if (!NATIONALITIES.includes((nat || '').toUpperCase())) bad.push('nat');
+        if (!country) bad.push('country');
+        if (isSE && !PLAYER_LEVELS.includes(parseInt(level, 10))) bad.push('level');
+        if (yt && !parseYouTube(yt)) bad.push('video');
+        if (!isEmail(email)) bad.push('email');
+        const key = ((name || '') + (birth || '')).toLowerCase();
+        if (!bad.length && seen.has(key)) bad.push('dup');
+        if (bad.length) errors.push({ line: i + 1, fields: bad }); else { seen.add(key); rows.push({ name, birth, pos: pos.toUpperCase(), nat: nat.toUpperCase(), isSE, country, club, level, yt, email }); }
+      });
+      if (errors.length) return { added: 0, errors };
+      rows.forEach(r => {
+        const id = nextId('p'); const tok = Math.random().toString(36).slice(2, 10) + Date.now().toString(36);
+        db.players.push({ id, userId: null, name: r.name, birthDate: r.birth, pos: r.pos, foot: 'R', height: null, nat: r.nat, eu: EU_EEA.has(r.nat), country: r.isSE ? 'SE' : 'OTHER', otherCountry: r.isSE ? '' : r.country, club: r.club, level: r.isSE ? parseInt(r.level, 10) : null, region: '', matches: 0, goals: 0, assists: 0, cleanSheets: null, bio: '', agentStatus: 'has', agentName: a.name, agentEmail: a.email, agentId: a.id, consent: 'invited', consentToken: tok, videoUrl: parseYouTube(r.yt) || '', photo: null, active: false, demo: false, availability: 'unknown', availableFrom: '', availUpdatedAt: null, replyStats: null, updatedAt: new Date().toISOString() });
+        db.contacts[id] = { email: a.email, phone: '', playerEmail: r.email };
+      });
+      save(); return { added: rows.length, errors: [] };
+    },
+    async agentRemove(id) {
+      const a = myAgent(); if (!a) fail('FORBIDDEN');
+      const p = playerById(id); if (!p || p.agentId !== a.id) fail('NOT_FOUND');
+      db.players = db.players.filter(x => x.id !== id); delete db.contacts[id]; db.shortlist && Object.keys(db.shortlist).forEach(k => { db.shortlist[k] = db.shortlist[k].filter(x => x !== id); }); save();
+    },
+    /* SUPABASE: public RPC get_consent(token) / respond_consent(token, approve) – token is single-purpose, unguessable, expires */
+    async consentGet(token) {
+      await sleep(30); const p = db.players.find(x => x.consentToken === token); if (!p) fail('NOT_FOUND');
+      return { name: p.name, birthDate: p.birthDate, pos: p.pos, nat: p.nat, eu: p.eu, country: p.country, otherCountry: p.otherCountry, club: p.club, videoUrl: p.videoUrl, agentName: p.agentName, status: p.consent };
+    },
+    async consentRespond(token, approve) {
+      await sleep(80); const p = db.players.find(x => x.consentToken === token); if (!p) fail('NOT_FOUND');
+      if (p.consent !== 'invited') fail('NOT_FOUND');
+      if (approve) { p.consent = 'approved'; p.active = true; p.updatedAt = new Date().toISOString(); }
+      else { db.players = db.players.filter(x => x.id !== p.id); delete db.contacts[p.id]; }
+      save();
+    },
     async getContact(playerId) {
       const c = myClub(); if (!c || !planActive(c)) fail('FORBIDDEN');
       const r = db.requests.find(x => x.clubId === c.id && x.playerId === playerId && x.status === 'accepted');
@@ -1235,9 +1301,9 @@ function formatMoneyRange(tier, interval, cur) { return fmtMoney(CONFIG.prices[t
 
 /* ---------- demo bar ---------- */
 function demoBar(me) {
-  const cur = !me ? 'visitor' : me.role === 'player' ? 'player' : me.club.id === 'c1' ? 'club' : me.club.id === 'c2' ? 'club_unpaid' : 'other';
+  const cur = !me ? 'visitor' : me.role === 'player' ? 'player' : me.role === 'agent' ? 'agent' : me.club.id === 'c1' ? 'club' : me.club.id === 'c2' ? 'club_unpaid' : 'other';
   const b = (k, l) => `<button type="button" data-action="demo" data-kind="${k}" aria-pressed="${cur === k}">${l}</button>`;
-  return `<div class="demo-bar" role="region" aria-label="Demo"><b>DEMO</b><span>${t('demo.view')}</span>${b('visitor', t('demo.visitor'))}${b('club', t('demo.club'))}${b('club_unpaid', t('demo.clubUnpaid'))}${b('player', t('demo.player'))}<span class="sp"></span><button type="button" class="lnk" data-action="demo-reset">${t('demo.reset')}</button></div>`;
+  return `<div class="demo-bar" role="region" aria-label="Demo"><b>DEMO</b><span>${t('demo.view')}</span>${b('visitor', t('demo.visitor'))}${b('club', t('demo.club'))}${b('club_unpaid', t('demo.clubUnpaid'))}${b('player', t('demo.player'))}${b('agent', t('demo.agent'))}<span class="sp"></span><button type="button" class="lnk" data-action="demo-reset">${t('demo.reset')}</button></div>`;
 }
 
 /* ---------- shells ---------- */
@@ -1256,19 +1322,20 @@ function publicShell(body, active) {
   </div></div></footer>`;
 }
 function navItems(me) {
+  if (me.role === 'agent') return [['/app/agent', 'users', t('nav.agentPlayers')]];
   if (me.role === 'club') return [['/app/discover', 'search', t('nav.discover')], ['/app/saved', 'bookmark', t('nav.saved')], ['/app/requests', 'send', t('nav.requests')], ['/app/account', 'card', t('nav.account')], ['/app/settings', 'sliders', t('nav.settings')]];
   return [['/app/profile', 'user', t('nav.myProfile')], ['/app/requests', 'inbox', t('nav.inbox'), me.badge], ['/app/settings', 'sliders', t('nav.settings')]];
 }
 function appShell(body, active) {
   const me = S.me; const items = navItems(me);
   const cur = p => (active === p || (p === '/app/discover' && active === '/app/player') ? ' aria-current="page"' : '');
-  const name = me.role === 'player' ? me.profile.name : me.club.name;
-  const sub = me.role === 'player' ? t('role.player') : t('role.club');
+  const name = me.role === 'player' ? me.profile.name : me.role === 'agent' ? me.agent.name : me.club.name;
+  const sub = me.role === 'player' ? t('role.player') : me.role === 'agent' ? t('role.agent') : t('role.club');
   return `<div class="app">
     <aside class="sidebar" aria-label="${t('nav.main')}">
       ${logo('#/app')}
       <nav class="stack sm" style="gap:4px">${items.map(([p, ic, l, n]) => `<a href="#${p}"${cur(p)}>${icon(ic)}<span>${l}</span>${n ? `<span class="dot">${n}</span>` : ''}</a>`).join('')}</nav>
-      <div class="who">${avatar(me.role === 'player' ? me.profile : { id: me.club.id, name: me.club.name }, 'sm')}<div class="grow"><b style="display:block;font-size:.9rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(name)}</b><span class="muted" style="font-size:.78rem">${sub}</span></div>
+      <div class="who">${avatar(me.role === 'player' ? me.profile : me.role === 'agent' ? { id: me.agent.id, name: me.agent.name } : { id: me.club.id, name: me.club.name }, 'sm')}<div class="grow"><b style="display:block;font-size:.9rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(name)}</b><span class="muted" style="font-size:.78rem">${sub}</span></div>
         <button type="button" class="iconbtn" data-action="signout" aria-label="${t('nav.signout')}" title="${t('nav.signout')}">${icon('logout')}</button></div>
     </aside>
     <div>
@@ -1308,7 +1375,7 @@ window.addEventListener('hashchange', () => { closeModal(false, true); render();
 CH.lang = el => { LANG = el.value; store.set('scoutme.lang', LANG); render(); };
 A.demo = async el => {
   const k = el.dataset.kind;
-  if (k === 'visitor') { await Api.signOut(); go('/'); } else { await Api.demoSwitch(k); go(k === 'player' ? '/app/profile' : '/app/discover'); }
+  if (k === 'visitor') { await Api.signOut(); go('/'); } else { await Api.demoSwitch(k); go(k === 'player' ? '/app/profile' : k === 'agent' ? '/app/agent' : '/app/discover'); }
 };
 A['demo-reset'] = async () => { await Api.resetDemo(); S.filters = defaultFilters(); S.wiz = null; toast(t('demo.resetDone'), 'ok'); go('/'); };
 A.signout = async () => { await Api.signOut(); go('/'); };
@@ -1497,6 +1564,7 @@ function loginView() {
       <button class="btn ghost block" type="button" data-action="login-demo" data-id="u_c1">${icon('users')}${t('demo.club')}</button>
       <button class="btn ghost block" type="button" data-action="login-demo" data-id="u_c2">${icon('users')}${t('demo.clubUnpaid')}</button>
       <button class="btn ghost block" type="button" data-action="login-demo" data-id="u_p1">${icon('user')}${t('demo.player')}</button>
+      <button class="btn ghost block" type="button" data-action="login-demo" data-id="u_a1">${icon('users')}${t('demo.agent')}</button>
     </div>
     <p class="muted" style="margin-top:18px;text-align:center">${t('login.noAccount')} <a href="#/join">${t('nav.join')}</a></p>
   </div></section>`;
@@ -1995,6 +2063,98 @@ A['cancel-toggle'] = async el => {
   if (cancel && !(await confirmDialog({ title: t('acct.cancel'), text: t('acct.cancelConfirm', { date: fmtDate(S.me.club.plan.renewsAt) }), label: t('acct.cancel'), danger: true }))) return;
   await Api.setCancel(cancel); toast(cancel ? t('acct.cancelled') : t('acct.resumed'), 'ok'); render();
 };
+/* ═══ AGENT SIDE + PLAYER CONSENT ═══════════════════════════════════════
+   The agent (e.g. a football agency) bulk-adds players. Each player gets a personal approval link.
+   A profile stays hidden from clubs until the player approves it himself (GDPR: consent per player). */
+const AGENT_EXAMPLE = [
+  'Santiago Ortiz;2002-05-14;CB;PY;Paraguay;Club Ejemplo Asunción;;https://www.youtube.com/@exempel1;santiago@example.com',
+  'Matías Vera;2004-02-03;RW;PY;Paraguay;Club Ejemplo Luque;;https://www.youtube.com/@exempel2;matias@example.com',
+  'Cristian Ramos;1999-11-21;LB;CO;Sverige;Dalbro IF;4;https://www.youtube.com/@exempel3;cristian@example.com'
+].join('\n');
+const consentUrl = tok => location.href.split('#')[0] + '#/consent/' + tok;
+
+async function agentView(me) {
+  const list = await Api.agentList();
+  const ok = list.filter(p => p.consent === 'approved').length; const wait = list.length - ok;
+  const st = S.agentForm || { text: '', res: null };
+  const chip = (n, l) => `<div class="stat"><b>${n}</b><span>${l}</span></div>`;
+  const res = st.res
+    ? (st.res.errors && st.res.errors.length
+      ? notice('bad', `<b>${t('agt.errTitle')}</b><ul style="margin:8px 0 0 18px">${st.res.errors.map(e => `<li>${t('agt.errLine', { n: e.line, fields: e.fields.map(f => t('agt.col.' + f)).join(', ') })}</li>`).join('')}</ul>`, 'info')
+      : st.res.msg ? notice('bad', st.res.msg, 'info') : notice('ok', t('agt.added', { n: st.res.added }), 'check'))
+    : '';
+  const row = p => `<div class="card"><div class="req-item">${avatar({ id: p.id, name: p.name })}
+    <div class="grow"><div class="row between wrap"><b>${esc(p.name)}</b>${p.consent === 'approved' ? `<span class="badge green">${icon('check')}${t('agt.approved')}</span>` : `<span class="badge amber">${t('agt.waiting')}</span>`}</div>
+      <p class="muted" style="font-size:.88rem;margin-top:2px">${posLabel(p.pos)} · ${p.age} ${t('common.years')} · ${esc(regionName(p.nat))}${p.club ? ' · ' + esc(p.club) : ''}</p>
+      ${p.consent === 'invited' ? `<div class="field" style="margin-top:10px"><label class="sr-only" for="lnk-${esc(p.id)}">${t('agt.link')}</label><input class="input" id="lnk-${esc(p.id)}" readonly value="${esc(consentUrl(p.token))}" onfocus="this.select()">
+        <div class="row wrap" style="margin-top:8px"><button type="button" class="btn sm ghost" data-action="copy-link" data-token="${esc(p.token)}">${t('agt.copy')}</button><a class="btn sm ghost" href="#/consent/${esc(p.token)}">${t('agt.openDemo')}</a></div></div>` : ''}
+      <div style="margin-top:8px"><button type="button" class="linkbtn" data-action="agent-remove" data-id="${esc(p.id)}" data-name="${esc(p.name)}">${icon('trash', 'sm')} ${t('agt.remove')}</button></div>
+    </div></div></div>`;
+  return `<div class="page-head"><div><h1>${t('agt.title')}</h1><p>${t('agt.sub')}</p></div></div>
+  <div class="stats" style="margin-bottom:18px">${chip(list.length, t('agt.stat.total'))}${chip(ok, t('agt.stat.approved'))}${chip(wait, t('agt.stat.waiting'))}</div>
+  <form class="card stack lg" data-form="agent-add" style="margin-bottom:18px" novalidate>
+    <div><h3 style="font-size:1.1rem">${t('agt.addTitle')}</h3><p class="muted" style="font-size:.9rem;margin-top:4px">${t('agt.addSub')}</p></div>
+    <div class="field"><label for="agent-rows">${t('agt.rows')}</label><textarea class="textarea" id="agent-rows" name="rows" rows="6" spellcheck="false" style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.82rem" placeholder="Name;1999-01-31;CB;PY;Paraguay;Club;;https://www.youtube.com/@…;mail@example.com">${esc(st.text)}</textarea><p class="hint">${t('agt.cols')}</p></div>
+    ${res}
+    <label class="check"><input type="checkbox" name="confirm" value="1"><span>${t('agt.confirm')}</span></label>
+    <div class="row wrap" style="justify-content:flex-end"><button type="button" class="btn ghost" data-action="agent-example">${t('agt.example')}</button><button type="submit" class="btn primary">${t('agt.import')}</button></div>
+  </form>
+  <p class="section-title">${t('agt.listTitle')}</p>
+  ${list.length ? `<div class="stack">${list.map(row).join('')}</div>` : `<div class="empty">${icon('users')}<h3>${t('agt.empty')}</h3></div>`}`;
+}
+A['agent-example'] = () => { const ta = $('#agent-rows'); if (ta) { ta.value = AGENT_EXAMPLE; ta.focus(); } };
+FORMS['agent-add'] = async f => {
+  const d = readForm(f); S.agentForm = { text: d.rows || '', res: null };
+  if (!(d.rows || '').trim()) { S.agentForm.res = { msg: t('agt.errEmpty') }; return render(); }
+  if (!d.confirm) { S.agentForm.res = { msg: t('agt.errConfirm') }; return render(); }
+  const r = await Api.agentAddPlayers(d.rows);
+  S.agentForm = r.errors.length ? { text: d.rows, res: r } : { text: '', res: r };
+  render();
+};
+A['copy-link'] = async el => {
+  const url = consentUrl(el.dataset.token);
+  try { await navigator.clipboard.writeText(url); toast(t('agt.copied'), 'ok'); } catch { toast(t('agt.copyFail'), 'bad'); }
+};
+A['agent-remove'] = async el => {
+  if (!(await confirmDialog({ title: t('agt.removeT'), text: t('agt.removeD'), label: t('agt.remove'), danger: true }))) return;
+  await Api.agentRemove(el.dataset.id); toast(t('agt.removed'), 'ok'); render();
+};
+
+/* ---------- public consent page (opened by the player from the link) ---------- */
+async function consentView(token) {
+  let p;
+  try { p = await Api.consentGet(token); } catch { return `<section class="section"><div class="container" style="max-width:640px"><div class="empty">${icon('lock')}<h3>${t('cons.notFound')}</h3><a class="btn ghost" href="#/">${t('nav.home')}</a></div></div></section>`; }
+  const done = S.consentDone === token;
+  if (done) return `<section class="section"><div class="container" style="max-width:640px"><div class="card pad-lg stack">${notice('ok', `<b>${t('cons.doneT')}</b> ${t('cons.doneD', { mail: 'privacy@scoutme.example' })}`, 'check')}<a class="btn ghost" href="#/">${t('nav.home')}</a></div></div></section>`;
+  if (p.status === 'approved') return `<section class="section"><div class="container" style="max-width:640px"><div class="card pad-lg stack">${notice('ok', t('cons.already'), 'check')}</div></div></section>`;
+  const err = S.consentErr ? `<p class="err" role="alert">${icon('info', 'sm')}${t('cons.errChecks')}</p>` : '';
+  return `<section class="section"><div class="container" style="max-width:640px"><div class="stack lg">
+    <div><p class="eyebrow">ScoutMe</p><h1 style="font-size:1.8rem">${t('cons.hi', { name: esc(p.name) })}</h1><p class="text2" style="margin-top:8px">${t('cons.intro', { agent: esc(p.agentName) })}</p></div>
+    <div class="card"><h3 style="margin-bottom:6px">${t('cons.check')}</h3><dl class="kv">
+      <dt>${t('f.name')}</dt><dd>${esc(p.name)}</dd><dt>${t('f.birth')}</dt><dd>${esc(p.birthDate)}</dd><dt>${t('f.pos')}</dt><dd>${posLabel(p.pos)}</dd>
+      <dt>${t('f.nat')}</dt><dd>${esc(regionName(p.nat))}</dd><dt>${t('f.eu')}</dt><dd>${p.eu ? t('common.yes') : t('common.no')}</dd>
+      <dt>${t('f.club')}</dt><dd>${esc(p.club || '–')}</dd><dt>${t('f.country')}</dt><dd>${esc(p.country === 'SE' ? regionName('SE') : p.otherCountry)}</dd>
+      ${p.videoUrl ? `<dt>${t('f.video')}</dt><dd>${esc(p.videoUrl)}</dd>` : ''}</dl></div>
+    ${notice('', t('cons.what', { agent: esc(p.agentName) }), 'lock')}
+    <form class="card stack" data-form="consent" data-token="${esc(token)}" novalidate>
+      <label class="check"><input type="checkbox" name="c1" value="1"><span>${t('cons.c1')}</span></label>
+      <label class="check"><input type="checkbox" name="c2" value="1"><span>${t('cons.c2')}</span></label>
+      <label class="check"><input type="checkbox" name="c3" value="1"><span>${t('cons.c3')}</span></label>
+      ${err}
+      <div class="row wrap"><button type="submit" class="btn primary">${t('cons.approve')}</button><button type="button" class="btn ghost" data-action="consent-decline" data-token="${esc(token)}">${t('cons.decline')}</button></div>
+    </form></div></div></section>`;
+}
+FORMS.consent = async f => {
+  const d = readForm(f);
+  if (!(d.c1 && d.c2 && d.c3)) { S.consentErr = true; return render(); }
+  S.consentErr = false;
+  await Api.consentRespond(f.dataset.token, true); S.consentDone = f.dataset.token; render();
+};
+A['consent-decline'] = async el => {
+  if (!(await confirmDialog({ title: t('cons.declineT'), text: t('cons.declineD'), label: t('cons.decline'), danger: true }))) return;
+  await Api.consentRespond(el.dataset.token, false);
+  S.consentDone = null; location.hash = '#/consent-removed';
+};
 
 /* ═══ PLAYER SIDE ═══════════════════════════════════════════════════════ */
 const MISSING_W = { photo: 10, video: 20, bio: 15, stats: 15, height: 5, club: 10, phone: 5 };
@@ -2175,10 +2335,13 @@ async function resolveRoute(r, me) {
       if (!me && S.wiz.step === 2) S.wiz.step = 1;
       return { title: t('cw.title'), shell: wizShell, html: clubWizView(me), scrollTop: true };
   }
+  if (parts[0] === 'consent' && parts[1]) return pub(t('cons.title'), await consentView(parts[1]));
+  if (parts[0] === 'consent-removed') return pub(t('cons.goneT'), `<section class="section"><div class="container" style="max-width:640px"><div class="card pad-lg stack">${notice('ok', `<b>${t('cons.goneT')}</b> ${t('cons.goneD')}`, 'check')}<a class="btn ghost" href="#/">${t('nav.home')}</a></div></div></section>`);
   if (parts[0] === 'app') {
     if (!me) return { redirect: '/login' };
     const sub = parts[1] || ''; const club = me.role === 'club';
     const app = (title, html, active, mount) => ({ title, shell: h => appShell(h, active), html, mount });
+    if (me.role === 'agent') return sub === 'agent' ? app(t('nav.agentPlayers'), await agentView(me), '/app/agent') : { redirect: '/app/agent' };
     if (sub === '') return { redirect: club ? '/app/discover' : '/app/profile' };
     if (sub === 'requests') return app(t('nav.requests'), club ? await clubRequestsView(me) : await playerRequestsView(me), '/app/requests');
     if (sub === 'settings') return app(t('nav.settings'), settingsView(me), '/app/settings');
